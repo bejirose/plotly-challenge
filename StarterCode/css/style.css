@@ -1,0 +1,161 @@
+{
+  box-sizing: border-box;
+  font-family: Ubuntu, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* The wrapper contains all of the page's content besides the footer, which is pushed to the bottom of the page */
+.wrapper {
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 30px;
+  overflow: auto;
+}
+
+/* The footer is positioned at the bottom of the page */
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  min-height: 5px;
+  background: #4e5d6c;
+  color: white;
+  text-align: center;
+}
+
+.navbar {
+  padding: 5px;
+  margin: 0;
+}
+
+/* This CSS styles the ufo icon in the navbar */
+.nav-ufo {
+  position: absolute;
+  bottom: 5px;
+  left: 150px;
+  width: 35px;
+  color: white;
+}
+
+/* Adding styles to the aside and filter form */
+.ufo-form {
+  margin-top: 50px;
+}
+
+.filters .panel-body {
+  padding: 0;
+}
+
+.filters {
+  margin-top: 10px;
+}
+
+/*select {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  color: #998e9f;
+  outline: none;
+}*/
+
+#table-area th {
+  text-align: center;
+}
+
+#table-area th:first-child,
+#table-area th:nth-child(2),
+#table-area th:nth-child(6) {
+  min-width: 70px;
+}
+
+.loader {
+  margin-top: 50px;
+}
+
+.margin-top-50 {
+  margin-top: 50px;
+}
+
+/* The styles for the parallax */
+.jumbotron {
+  /*position: relative;
+  height: 50px;
+  padding: 20px;
+  margin: 0; */
+  background: url("../images/bacteria.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero h1 {
+  margin-top: 200px;
+  font-size: 0.1rem;
+  animation: title 1.2s forwards linear;
+}
+
+.hero p {
+  font-size: 2rem;
+  opacity: 0;
+  animation: subtitle 1.2s forwards linear;
+  animation-delay: 1.2s;
+}
+
+.btn {
+  border: none;
+  background-color: rgb(223, 170, 73);
+  color: black;
+  float: right;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.panel-heading {
+  text-align: center;
+  background-color: rgb(230, 192, 121);
+  color: black;
+}
+
+.panel-heading-optional {
+  text-align: center;
+  background-color: rgb(230, 192, 121);
+  color: black;
+}
+
+/* input placeholder color changes */
+.form-control::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #8e979f;
+}
+
+.form-control::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #8e979f;
+}
+
+.form-control:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #8e979f;
+}
+
+.form-control:-moz-placeholder {
+  /* Firefox 18- */
+  color: #8e979f;
+}
+
+/* media queries which will only be activated at specific screen sizes */
+@media (max-width: 800px) {
+  #table-area td {
+    font-size: 1em;
+  }
+}
