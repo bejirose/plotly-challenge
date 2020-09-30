@@ -70,28 +70,17 @@ function buildCharts(id) {
   size = [];
   console.log(chartData[0].sample_values.slice(0,20));
  
-  // Add the size of the bubles for the top  20 items
-  //for (i = 0; i < chartData[0].sample_values.length; i++) {
-  for (i = 0; i < 20; i++) {
-     if ( chartData[0].sample_values[i] > 20) {
-      size[i] = 1+ chartData[0].sample_values[i] ;
-    }
-    else {
-      size[i] = 1+ 20 ; // Adding this to draw sample_value < 20 a bit bigger to make it visible
-    }
-  }
-
   var data = [{
-    x: chartData[0].otu_ids.slice(0,20),
-    y: chartData[0].sample_values.slice(0,20),
-    text: chartData[0].otu_labels.slice(0,20),
+    x: chartData[0].otu_ids,
+    y: chartData[0].sample_values,
+    text: chartData[0].otu_labels,
     name: "OTU Chart",
     mode: 'markers',
     marker: {
-      size: size,
+      size: chartData[0].sample_values,
       sizeref: (2.0 * Math.max(...size) / (maxiMarkerSize**2)),
       sizemode: 'area',
-      color: chartData[0].sample_values.slice(0,20)
+      color: chartData[0].otu_ids
     }
 
   }];
